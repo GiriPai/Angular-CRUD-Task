@@ -1,0 +1,29 @@
+
+<div>
+  <table>
+    
+    <thead>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Is Active</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{employee.isActive}}</td>
+            <td>
+              <a routerLink="/edit-employee/{{employee.id}}"><button>Edit</button></a>
+              <button (click)="handleDelete(employee.id)">Delete</button>
+            
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>

@@ -1,0 +1,29 @@
+<form #employee="ngForm" (ngSubmit)="submitEmployee(employee);">
+  <div class="form-control">
+    <label>Name</label>
+    <input type="text" name="name" [(ngModel)]="user.name" />
+  </div>
+
+  <div class="form-control">
+    <label>Age</label>
+    <input type="number" name="age" [(ngModel)]="user.age" />
+  </div>
+
+  <div class="form-control">
+    <label>Gender</label>
+    <select name="gender" [(ngModel)]="user.gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+
+  <div class="form-control">
+    <label>Is Active</label>
+    <select name="isActive" [(ngModel)]="user.isActive">
+      <option value='1'>Active</option>
+      <option value='0'>In Active</option>
+    </select>
+  </div>
+
+  <button type="Submit">Submit</button>
+</form>

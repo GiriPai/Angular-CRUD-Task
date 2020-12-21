@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "giri",
+    "age": 22,
+    "gender": "Male",
+    "isActive": true
+  },
+  {
+    "id": 2,
+    "name": "hari",
+    "age": 12,
+    "gender": "Male",
+    "isActive": false
+  },
+  {
+    "id": 3,
+    "name": "Anu",
+    "age": 28,
+    "gender": "Female",
+    "isActive": true
+  }
+]

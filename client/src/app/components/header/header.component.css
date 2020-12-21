@@ -1,0 +1,16 @@
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(75, 73, 73);
+  padding: 10px;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(207, 205, 205);
+}

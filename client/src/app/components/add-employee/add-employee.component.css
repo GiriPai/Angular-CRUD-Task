@@ -1,0 +1,38 @@
+form {
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 50%;
+  padding: 20px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: 10px;
+}
+
+.form-control label {
+  width: 50%;
+  font-weight: bold;
+  color: white;
+}
+
+input {
+  width: 300px;
+  padding: 8px;
+}
+
+select {
+  width: 322px;
+  padding: 8px;
+}
+button {
+  width: 20%;
+  height: 30px;
+  background-color: rgb(75, 73, 73);
+  color: whitesmoke;
+}

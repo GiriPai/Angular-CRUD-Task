@@ -30,9 +30,6 @@ export class EditEmployeeComponent implements OnInit {
 
   ngOnInit(): void {
       this._employeeService.getEmployee(this.id).subscribe((employee) => {
-        console.log(employee)
-        if(employee.error) alert(employee.error)
-        else{
           const formData = employee.payload
           console.log(formData)
           this.user = {
@@ -42,7 +39,6 @@ export class EditEmployeeComponent implements OnInit {
             gender:formData.gender,
             isActive: formData.isActive ? '1' : '0'
           }
-        }
       })
   }
 
@@ -51,7 +47,6 @@ export class EditEmployeeComponent implements OnInit {
     this._employeeService.updateEmployee(this.id, employee.value).subscribe((res) => {
       alert(`Employee with id ${res.payload.id} has been modified`)
     })
-    // console.log(employee.value)
     this.router.navigate(['/'])
 
   }

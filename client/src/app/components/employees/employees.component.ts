@@ -18,11 +18,7 @@ export class EmployeesComponent implements OnInit {
 
   getEmployees(){
     this._employeeService.getEmployees().subscribe((employees) => {
-      if(employees.error){
-        alert(employees.error)
-      }else{
         this.employees = employees.payload
-      }
     })
   }
 

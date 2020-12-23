@@ -19,15 +19,15 @@ export class EmployeeService {
   employees : Employee[] = [
     {
       id:1,
-      name:"giri",
+      name:"Arun",
       age:22,
       gender:"Male",
       isActive: true
     },
     {
       id:2,
-      name:"hari",
-      age:12,
+      name:"Arjun",
+      age:28,
       gender:"Male",
       isActive: false
     },
@@ -38,7 +38,6 @@ export class EmployeeService {
       gender:"Female",
       isActive: true
     },
-   
   ]
 
   getEmployees():Observable<any>{
@@ -50,21 +49,14 @@ export class EmployeeService {
   }
 
   addEmployee(empdata):Observable<any>{
-    // empdata.id = this.employees.length + 1
-    // this.employees.push(empdata)
     return this.http.post<any>(this.employeesUrl, empdata);
   }
 
   updateEmployee(id, empdata):Observable<any>{
-    // let index = this.employees.findIndex(emp => emp.id === id)
-    // empdata.id = id
-    // this.employees.splice(index,1,empdata)
     return this.http.put<any>(`${this.employeesUrl}/${id}`, empdata)
   }
 
   removeEmployees(id):Observable<any>{
-    // return this.employees = this.employees.filter((emp) => emp.id != id)
-
     return this.http.delete<any>(`${this.employeesUrl}/${id}`)
   }
 }

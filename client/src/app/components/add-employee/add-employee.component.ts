@@ -24,11 +24,9 @@ export class AddEmployeeComponent implements OnInit {
     }else{
       form.value.isActive = false
     }
-    console.log(form.value)
     
     this._employeeService.addEmployee(form.value).subscribe((employee) => {
-      if(employee.error) alert(employee.error)
-      else if(employee.payload) alert("Employee details added successfully") 
+       alert("Employee details added successfully") 
     })
     form.reset()
   }
